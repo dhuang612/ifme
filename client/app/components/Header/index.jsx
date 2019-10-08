@@ -4,8 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactHtmlParser from 'react-html-parser';
 import { Logo } from '../Logo';
-// eslint-disable-next-line import/no-cycle
-import { HeaderProfile } from './HeaderProfile';
+import { Avatar } from '../Avatar';
 import css from './Header.scss';
 import { I18n } from '../../libs/i18n';
 
@@ -112,7 +111,7 @@ export class Header extends React.Component<Props, State> {
     return (
       <div id="headerMobile" className={css.headerMobileNav}>
         <div>
-          {profile ? <HeaderProfile profile={profile} /> : null}
+          {profile ? <Avatar profile={profile} /> : null}
           {mobileOnly ? ReactHtmlParser(mobileOnly) : null}
           {this.displayLinks()}
         </div>
