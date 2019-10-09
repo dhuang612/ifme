@@ -2,7 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBell } from '@fortawesome/free-solid-svg-icons';
-import type { Profile } from './index';
+import type {Profile} from './index';
 import { Notifications } from '../../widgets/Notifications';
 import { Avatar } from '../Avatar';
 import css from './HeaderProfile.scss';
