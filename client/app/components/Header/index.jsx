@@ -5,8 +5,14 @@ import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import ReactHtmlParser from 'react-html-parser';
 import { Logo } from '../Logo';
 import { HeaderProfile } from './HeaderProfile';
+import type { Profile } from './profile';
 import css from './Header.scss';
 import { I18n } from '../../libs/i18n';
+
+export type State = {
+  mobileNavOpen: boolean,
+  toggled: boolean,
+};
 
 export type Link = {
   name: string,
@@ -16,28 +22,11 @@ export type Link = {
   hideInMobile?: boolean,
 };
 
-export type Profile = {
-  avatar?: string,
-  name: string,
-  profile: Link,
-  account: Link,
-  notifications: {
-    plural: string,
-    none: string,
-    clear: string,
-  },
-};
-
 export type Props = {
   home: Link,
   links: Link[],
   mobileOnly?: any,
   profile?: Profile,
-};
-
-export type State = {
-  mobileNavOpen: boolean,
-  toggled: boolean,
 };
 
 export class Header extends React.Component<Props, State> {
